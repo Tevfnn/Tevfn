@@ -511,7 +511,7 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 		end)
 
 		user_input.InputEnded:Connect(function(input, is_event)
-			if not is_event and (input.KeyCode == Enum.KeyCode.RightShift or input.KeyCode == Enum.KeyCode.Insert)  then
+			if not is_event and (input.KeyCode == Enum.KeyCode.LeftControl or input.KeyCode == Enum.KeyCode.LeftAlt)  then
 
 				if not ui.Enabled then
 					nurysium:open()
