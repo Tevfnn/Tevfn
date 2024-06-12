@@ -17,8 +17,8 @@ local blur_shader = Instance.new("BlurEffect", workspace.CurrentCamera)
 local is_Mobile = game:GetService("UserInputService").TouchEnabled
 
 if not is_Mobile then
-	blur_shader.Size = 256
-	color_shader.Saturation = -1
+	blur_shader.Size = 15
+	color_shader.Saturation = -0.5
 end
 
 local function animate_elements(speed: number)
@@ -31,11 +31,11 @@ end
 
 function nurysium: open()
 	tween_service:Create(color_shader, TweenInfo.new(1.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
-		Saturation = -1
+		Saturation = -0.5
 	}):Play()
 
 	tween_service:Create(blur_shader, TweenInfo.new(0.65, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
-		Size = 256
+		Size = 15
 	}):Play()
 
 	task.delay(0.65, function()
@@ -135,7 +135,7 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	uiVisible.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	uiVisible.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	uiVisible.BorderSizePixel = 0
-	uiVisible.Position = UDim2.new(0.0450000018, 0, 0.862999976, 0)
+	uiVisible.Position = UDim2.new(0.045, 0, 0.863, 0)
 	uiVisible.Size = UDim2.new(0, 50, 0, 50)
 	uiVisible.ZIndex = 15
 	uiVisible.Font = Enum.Font.GothamBold
@@ -176,15 +176,15 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	Eye.Position = UDim2.new(0.239999995, 0, 0.239999995, 0)
 	Eye.Size = UDim2.new(0.5, 0, 0.5, 0)
 	Eye.ZIndex = 25
-	Eye.Image = "rbxassetid://17615525476"
-	Eye.ImageTransparency = 0.450
+	Eye.Image = "rbxassetid://17806035589"
+	Eye.ImageTransparency = 0
 
 	ui = Instance.new("ScreenGui", Main)
 
 	ui.Name = 'nurysium'
 	ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	
-	local girl_Image = Instance.new("Frame")
+	--[[local girl_Image = Instance.new("Frame")
 	local girl = Instance.new("ImageLabel")
 	local girl_UIGradient = Instance.new("UIGradient")
 	local girl_UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
@@ -212,7 +212,7 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	girl_UIGradient.Parent = girl
 	
 	girl_UIAspectRatioConstraint.Parent = girl
-	girl_UIAspectRatioConstraint.AspectRatio = 0.87
+	girl_UIAspectRatioConstraint.AspectRatio = 0.87]]
 
 	Background.Name = "Background"
 	Background.Parent = ui
