@@ -184,7 +184,7 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	ui.Name = 'nurysium'
 	ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	
-	--[[local girl_Image = Instance.new("Frame")
+	local girl_Image = Instance.new("Frame")
 	local girl = Instance.new("ImageLabel")
 	local girl_UIGradient = Instance.new("UIGradient")
 	local girl_UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
@@ -212,7 +212,7 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	girl_UIGradient.Parent = girl
 	
 	girl_UIAspectRatioConstraint.Parent = girl
-	girl_UIAspectRatioConstraint.AspectRatio = 0.87]]
+	girl_UIAspectRatioConstraint.AspectRatio = 0.87
 
 	Background.Name = "Background"
 	Background.Parent = ui
